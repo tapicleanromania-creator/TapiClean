@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://tapiclean.vercel.app/sitemap.xml
