@@ -430,11 +430,9 @@ ${formData.message || "Nu a fost specificat mesaj"}
                 </div>
 
                 <h1 className="text-4xl lg:text-6xl font-bold leading-tight text-[48px]">
-                  <span className="text-brand-gradient">
-                    Curățenie Tapițerie
-                  </span>
-                  <br />
-                  Profesională în Brașov
+                  <span className="text-brand-gradient">Curățare profesională tapițerie</span>
+                  
+                   în Brașov – canapele, saltele și tapițerie auto
                 </h1>
 
                 <p className="text-xl text-gray-600 leading-relaxed max-w-xl">
