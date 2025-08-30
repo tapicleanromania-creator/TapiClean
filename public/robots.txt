@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://tapiclean.ro/sitemap.xml
+Sitemap: https://www.tapiclean.ro/sitemap.xml
