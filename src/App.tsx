@@ -429,10 +429,10 @@ ${formData.message || "Nu a fost specificat mesaj"}
                   </Badge>
                 </div>
 
-                <h1 className="text-4xl lg:text-6xl font-bold leading-tight text-[48px]">
+                <h2 className="text-4xl lg:text-6xl font-bold leading-tight text-[48px]">
                   <span className="text-brand-gradient">Curățare profesională tapițerie</span>{" "}
                   în Brașov – canapele, saltele și tapițerie auto
-                </h1>
+                </h2>
 
                 <p className="text-xl text-gray-600 leading-relaxed max-w-xl">
                   Servicii specializate de curățenie tapițerie
