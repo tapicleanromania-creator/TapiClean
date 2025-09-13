@@ -21,38 +21,38 @@ export function BeforeAfterGallery() {
     {
       beforeImage: image_34460463ee7c26680231ae3afca1f01408deae47,
       afterImage: image_78058db15e8ad94dce419094ad921cc487929adb,
-      beforeLabel: "Înainte",
-      afterLabel: "După TapiClean"
+      beforeLabel: "Înainte curățare tapițerie - TapiClean Brașov",
+      afterLabel: "După curățare tapițerie - TapiClean Brașov"
     },
     {
       beforeImage: image_146ed5365f8f20af6263c3126a67176429c8b04c,
       afterImage: image_544c17a6af9ea79c7cf9dfe95290a9b686c8977b,
-      beforeLabel: "Înainte",
-      afterLabel: "După TapiClean"
+      beforeLabel: "Înainte curățare tapițerie - TapiClean Brașov",
+      afterLabel: "După curățare tapițerie - TapiClean Brașov"
     },
     {
       beforeImage: image_e2d6a2e1e9ecbbbf0034c90b7d6f8bc574f78cf8,
       afterImage: image_465c9e36ddc9542a2506c6eb8763d7054df6cf91,
-      beforeLabel: "Înainte",
-      afterLabel: "După TapiClean"
+      beforeLabel: "Înainte curățare tapițerie - TapiClean Brașov",
+      afterLabel: "După curățare tapițerie - TapiClean Brașov"
     },
     {
       beforeImage: image_3b4edcf7f6bf5d3f66a7f9c246627431a8646d7e,
       afterImage: image_0d3ea940d0f6d8369b90fee3ee59db5274ed252b,
-      beforeLabel: "Înainte",
-      afterLabel: "După TapiClean"
+      beforeLabel: "Înainte curățare tapițerie - TapiClean Brașov",
+      afterLabel: "După curățare tapițerie - TapiClean Brașov"
     },
     {
       beforeImage: image_67d522caaf32dba93509795d9a73fb5d7d06e131,
       afterImage: image_07f779cc08205d3fee8280e6277763489d10b147,
-      beforeLabel: "Înainte",
-      afterLabel: "După TapiClean"
+      beforeLabel: "Înainte curățare tapițerie - TapiClean Brașov",
+      afterLabel: "După curățare tapițerie - TapiClean Brașov"
     },
     {
       beforeImage: image_af65474c0dd075a3e64121f4937099d429318bda,
       afterImage: image_d306c3649707eff3ded7bec558293537cd3036ba,
-      beforeLabel: "Înainte",
-      afterLabel: "După TapiClean"
+      beforeLabel: "Înainte curățare tapițerie - TapiClean Brașov",
+      afterLabel: "După curățare tapițerie - TapiClean Brașov"
     }
   ];
 

@@ -430,9 +430,8 @@ ${formData.message || "Nu a fost specificat mesaj"}
                 </div>
 
                 <h1 className="text-4xl lg:text-6xl font-bold leading-tight text-[48px]">
-                  <span className="text-brand-gradient">Curățare profesională tapițerie</span>
-                  
-                   în Brașov – canapele, saltele și tapițerie auto
+                  <span className="text-brand-gradient">Curățare profesională tapițerie</span>{" "}
+                  în Brașov – canapele, saltele și tapițerie auto
                 </h1>
 
                 <p className="text-xl text-gray-600 leading-relaxed max-w-xl">
@@ -478,6 +477,9 @@ ${formData.message || "Nu a fost specificat mesaj"}
                 <ImageWithFallback
                   src={image_ee1019f0bcea2a1192028fabb176167bcd1b6581}
                   alt="Curățenie tapițerie profesională în Brașov - TapiClean"
+                  loading="eager"
+                  fetchpriority="high"
+                  decoding="async"
                   className="rounded-3xl shadow-2xl w-full h-[500px] object-cover relative z-10"
                 />
 
@@ -896,20 +898,25 @@ ${formData.message || "Nu a fost specificat mesaj"}
                 Curățenie Tapițerie
               </h4>
               <ul className="space-y-2 opacity-90">
-                <li className="hover:text-[#00B5FC] transition-colors cursor-pointer">
-                  Canapele
+                <li>
+                  <a href="/curatare-canapele.html" className="hover:text-[#00B5FC] transition-colors">
+                    Curățare Canapele
+                  </a>
                 </li>
-                <li className="hover:text-[#00B5FC] transition-colors cursor-pointer">
-                  Fotolii
+                <li>
+                  <a href="/curatare-auto.html" className="hover:text-[#00B5FC] transition-colors">
+                    Curățare Tapițerie Auto
+                  </a>
                 </li>
-                <li className="hover:text-[#00B5FC] transition-colors cursor-pointer">
-                  Saltele
+                <li>
+                  <a href="/contact.html" className="hover:text-[#00B5FC] transition-colors">
+                    Contact & Programări
+                  </a>
                 </li>
-                <li className="hover:text-[#00B5FC] transition-colors cursor-pointer">
-                  Scaune Auto
-                </li>
-                <li className="hover:text-[#00B5FC] transition-colors cursor-pointer">
-                  Urgențe 24h
+                <li>
+                  <a href="#services" className="hover:text-[#00B5FC] transition-colors" onClick={(e) => { e.preventDefault(); document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' }); }}>
+                    Toate Serviciile
+                  </a>
                 </li>
               </ul>
             </div>

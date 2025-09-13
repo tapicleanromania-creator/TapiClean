@@ -83,6 +83,8 @@ export function BeforeAfterSlider({
         <img
           src={afterImage}
           alt={afterLabel}
+          loading="lazy"
+          decoding="async"
           className="absolute inset-0 w-full h-full object-cover"
           draggable={false}
         />
@@ -95,6 +97,8 @@ export function BeforeAfterSlider({
           <img
             src={beforeImage}
             alt={beforeLabel}
+            loading="lazy"
+            decoding="async"
             className="w-full h-full object-cover"
             draggable={false}
           />
