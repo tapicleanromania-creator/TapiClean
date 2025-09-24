@@ -114,23 +114,23 @@ export function InteractiveServices() {
           name: 'Saltele Matrimoniale',
           description: 'Curățare completă și dezinfectare pentru saltele mari',
           duration: '60-75 min',
-          price: 'de la 180 RON'
+          price: 'de la 180 RON / 1 față'
         },
         {
           name: 'Saltele Simple',
           description: 'Serviciu specializat pentru saltele individuale',
           duration: '45-60 min',
-          price: 'de la 120 RON'
+          price: 'de la 120 RON / 1 față'
         },
         {
           name: 'Saltele Copii',
           description: 'Curățare delicată cu produse sigure pentru copii',
           duration: '30-45 min',
-          price: 'de la 100 RON'
+          price: 'de la 100 RON / 1 față'
         },
         {
           name: 'Tablie Tapițată',
-          description: 'Cură��are pentru tablii de pat și ramuri tapițate',
+          description: 'Curățare pentru tablii de pat și ramuri tapițate',
           duration: '30-40 min',
           price: 'de la 70 RON'
         }
