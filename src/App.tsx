@@ -146,10 +146,10 @@ export default function App() {
       phone: formData.phone || "Nu a fost specificat",
       location: formData.service || "Nu a fost specificată",
       message: formData.message || "Nu a fost specificat mesaj",
-      subject: `Solicitare curățenie tapițerie - ${formData.name}`,
+      subject: `Solicitare curățare tapițerie - ${formData.name}`,
       reply_to: formData.email,
       // Additional template variables
-      service_type: "Curățenie Tapițerie",
+      service_type: "Curățare Tapițerie",
       timestamp: new Date().toLocaleString("ro-RO"),
       formatted_message: `
 Nume: ${formData.name}
@@ -216,7 +216,7 @@ Trimis la: ${new Date().toLocaleString("ro-RO")}
         // Final fallback: mailto link with pre-filled data
         const mailtoBody = encodeURIComponent(
           `
-Solicitare curățenie tapițerie
+Solicitare curățare tapițerie
 
 Nume: ${formData.name}
 Email: ${formData.email}
@@ -229,7 +229,7 @@ ${formData.message || "Nu a fost specificat mesaj"}
         );
 
         const mailtoSubject = encodeURIComponent(
-          `Solicitare curățenie tapițerie - ${formData.name}`,
+          `Solicitare curățare tapițerie - ${formData.name}`,
         );
         const mailtoLink = `mailto:tapiclean.romania@gmail.com?subject=${mailtoSubject}&body=${mailtoBody}`;
 
@@ -425,7 +425,7 @@ ${formData.message || "Nu a fost specificat mesaj"}
                 <div className="flex items-center gap-2">
                   <Badge className="bg-brand-gradient text-white border-0 shadow-md">
                     <MapPin className="w-4 h-4 mr-1" />
-                    Curățenie Tapițerie Brașov
+                    Curățare Tapițerie Brașov
                   </Badge>
                 </div>
 
@@ -435,7 +435,7 @@ ${formData.message || "Nu a fost specificat mesaj"}
                 </h2>
 
                 <p className="text-xl text-gray-600 leading-relaxed max-w-xl">
-                  Servicii specializate de curățenie tapițerie
+                  Servicii specializate de curățare tapițerie
                   în zonă și împrejurimi. Canapele, fotolii,
                   saltele și scaune auto - toate curățate
                   profesional cu garanție completă și produse și
@@ -476,7 +476,7 @@ ${formData.message || "Nu a fost specificat mesaj"}
               <div className="relative">
                 <ImageWithFallback
                   src={image_ee1019f0bcea2a1192028fabb176167bcd1b6581}
-                  alt="Curățenie tapițerie profesională în Brașov - TapiClean"
+                  alt="Curățare tapițerie profesională în Brașov - TapiClean"
                   loading="eager"
                   fetchpriority="high"
                   decoding="async"
@@ -530,7 +530,7 @@ ${formData.message || "Nu a fost specificat mesaj"}
             <div className="relative">
               <img
                 src={ownerImage}
-                alt="Artur Bețcu - Proprietarul TapiClean, specialist în curățenie tapițerie Brașov"
+                alt="Artur Bețcu - Proprietarul TapiClean, specialist în curățare tapițerie Brașov"
                 className="rounded-3xl shadow-2xl w-full h-[500px] object-cover"
               />
 
@@ -556,7 +556,7 @@ ${formData.message || "Nu a fost specificat mesaj"}
                   Am înființat TapiClean pentru a aduce servicii
                   de{" "}
                   <strong className="text-brand-gradient">
-                    curățenie tapițerie de calitate profesională
+                    curățare tapițerie de calitate profesională
                   </strong>{" "}
                   direct în zonă și împrejurimi. Fiecare
                   canapea, fotoliu sau saltea pe care o curăț
@@ -627,11 +627,11 @@ ${formData.message || "Nu a fost specificat mesaj"}
               Contactează-ne Local
             </Badge>
             <h2 className="text-3xl lg:text-5xl font-bold mb-4 text-gray-800">
-              Curățenie Tapițerie în Brașov?
+              Curățare Tapițerie în Brașov?
             </h2>
             <p className="text-xl text-gray-600">
               Obține o evaluare și ofertă gratuită pentru
-              serviciul de curățenie tapițerie în zonă și
+              serviciul de curățare tapițerie în zonă și
               împrejurimi. Răspundem în maxim 24 de ore!
             </p>
           </div>
@@ -875,7 +875,7 @@ ${formData.message || "Nu a fost specificat mesaj"}
               />
               <p className="opacity-90 mb-6 max-w-md leading-relaxed">
                 <strong>
-                  Curățenie tapițerie profesională în Brașov.
+                  Curățare tapițerie profesională în Brașov.
                 </strong>{" "}
                 Servicii specializate pentru canapele, fotolii,
                 saltele și scaune auto. Acoperim zona Braș și
@@ -895,7 +895,7 @@ ${formData.message || "Nu a fost specificat mesaj"}
 
             <div>
               <h4 className="font-bold mb-4 text-[#00B5FC]">
-                Curățenie Tapițerie
+                Curățare Tapițerie
               </h4>
               <ul className="space-y-2 opacity-90">
                 <li>
@@ -958,7 +958,7 @@ ${formData.message || "Nu a fost specificat mesaj"}
 
           <div className="border-t border-white/20 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center opacity-90">
             <p>
-              &copy; 2025 TapiClean - Curățenie Tapițerie
+              &copy; 2025 TapiClean - Curățare Tapițerie
               Brașov. Toate drepturile rezervate.
             </p>
             <div className="flex items-center gap-4 mt-4 md:mt-0">
