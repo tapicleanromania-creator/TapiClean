@@ -1,5 +1,4 @@
-import image_ee1019f0bcea2a1192028fabb176167bcd1b6581 from 'figma:asset/ee1019f0bcea2a1192028fabb176167bcd1b6581.png';
-import image_e27dca3a368c5def858d0991fca7c129f170aa3a from 'figma:asset/e27dca3a368c5def858d0991fca7c129f170aa3a.png';
+import heroImage from "./assets/Hero Image.webp";
 /*
   EmailJS Setup Instructions for TapiClean Contact Form:
   
@@ -40,7 +39,7 @@ import { InteractiveServices } from "./components/InteractiveServices";
 import { BeforeAfterGallery } from "./components/BeforeAfterGallery";
 import { toast } from "sonner@2.0.3";
 import { Toaster } from "./components/ui/sonner";
-import ownerImage from "figma:asset/6ec0392b281360fada8d110af4c16d05ce149d14.png";
+import personalImage from "./assets/Personal.webp";
 import {
   Star,
   Phone,
@@ -475,7 +474,7 @@ ${formData.message || "Nu a fost specificat mesaj"}
             <div className="relative">
               <div className="relative">
                 <ImageWithFallback
-                  src={image_ee1019f0bcea2a1192028fabb176167bcd1b6581}
+                  src={heroImage}
                   alt="Curățare tapițerie profesională în Brașov - TapiClean"
                   loading="eager"
                   fetchpriority="high"
@@ -529,7 +528,7 @@ ${formData.message || "Nu a fost specificat mesaj"}
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="relative">
               <img
-                src={ownerImage}
+                src={personalImage}
                 alt="Artur Bețcu - Proprietarul TapiClean, specialist în curățare tapițerie Brașov"
                 className="rounded-3xl shadow-2xl w-full h-[500px] object-cover"
               />

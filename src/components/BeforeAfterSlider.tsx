@@ -73,7 +73,7 @@ export function BeforeAfterSlider({
         {/* Before Image (Clipped) */}
         <div 
           className="absolute inset-0 overflow-hidden"
-          style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
+          style={{ clipPath: `inset(0 0 0 ${sliderPosition}%)` }}
         >
           <img
             src={beforeImage}
@@ -101,10 +101,10 @@ export function BeforeAfterSlider({
 
         {/* Labels */}
         <div className="absolute top-4 left-4 bg-black/70 text-white px-3 py-1 rounded-full text-sm font-medium backdrop-blur-sm">
-          {beforeLabel}
+          {afterLabel}
         </div>
         <div className="absolute top-4 right-4 bg-black/70 text-white px-3 py-1 rounded-full text-sm font-medium backdrop-blur-sm">
-          {afterLabel}
+          {beforeLabel}
         </div>
 
         {/* Instruction tooltip - only on hover for desktop */}

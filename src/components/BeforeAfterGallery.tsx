@@ -1,15 +1,15 @@
-import image_d306c3649707eff3ded7bec558293537cd3036ba from 'figma:asset/d306c3649707eff3ded7bec558293537cd3036ba.png';
-import image_af65474c0dd075a3e64121f4937099d429318bda from 'figma:asset/af65474c0dd075a3e64121f4937099d429318bda.png';
-import image_07f779cc08205d3fee8280e6277763489d10b147 from 'figma:asset/07f779cc08205d3fee8280e6277763489d10b147.png';
-import image_67d522caaf32dba93509795d9a73fb5d7d06e131 from 'figma:asset/67d522caaf32dba93509795d9a73fb5d7d06e131.png';
-import image_3b4edcf7f6bf5d3f66a7f9c246627431a8646d7e from 'figma:asset/3b4edcf7f6bf5d3f66a7f9c246627431a8646d7e.png';
-import image_0d3ea940d0f6d8369b90fee3ee59db5274ed252b from 'figma:asset/0d3ea940d0f6d8369b90fee3ee59db5274ed252b.png';
-import image_465c9e36ddc9542a2506c6eb8763d7054df6cf91 from 'figma:asset/465c9e36ddc9542a2506c6eb8763d7054df6cf91.png';
-import image_e2d6a2e1e9ecbbbf0034c90b7d6f8bc574f78cf8 from 'figma:asset/e2d6a2e1e9ecbbbf0034c90b7d6f8bc574f78cf8.png';
-import image_544c17a6af9ea79c7cf9dfe95290a9b686c8977b from 'figma:asset/544c17a6af9ea79c7cf9dfe95290a9b686c8977b.png';
-import image_146ed5365f8f20af6263c3126a67176429c8b04c from 'figma:asset/146ed5365f8f20af6263c3126a67176429c8b04c.png';
-import image_78058db15e8ad94dce419094ad921cc487929adb from 'figma:asset/78058db15e8ad94dce419094ad921cc487929adb.png';
-import image_34460463ee7c26680231ae3afca1f01408deae47 from 'figma:asset/34460463ee7c26680231ae3afca1f01408deae47.png';
+import canapeaBefore from '../assets/Canapea(1).webp';
+import canapeaAfter from '../assets/Canapea(2).webp';
+import cCanapeaBefore from '../assets/CCanapea(1).webp';
+import cCanapeaAfter from '../assets/CCanapea(2).webp';
+import zzAnapeaBefore from '../assets/ZZanapea(1).webp';
+import zzAnapeaAfter from '../assets/ZZanapea(2).webp';
+import zofaBefore from '../assets/Zofa (1).webp';
+import zofaAfter from '../assets/Zofa (2).webp';
+import petsBefore from '../assets/Pets (1).webp';
+import petsAfter from '../assets/Pets(2).webp';
+import matrasBefore from '../assets/matras(1).webp';
+import matrasAfter from '../assets/matras(2).webp';
 import React from 'react';
 import { Badge } from './ui/badge';
 import { Button } from './ui/button';
@@ -19,28 +19,28 @@ import { Sparkles, Star, Award, Phone } from 'lucide-react';
 export function BeforeAfterGallery() {
   const beforeAfterExamples = [
     {
-      beforeImage: image_34460463ee7c26680231ae3afca1f01408deae47,
-      afterImage: image_78058db15e8ad94dce419094ad921cc487929adb
+      beforeImage: canapeaBefore,
+      afterImage: canapeaAfter
     },
     {
-      beforeImage: image_146ed5365f8f20af6263c3126a67176429c8b04c,
-      afterImage: image_544c17a6af9ea79c7cf9dfe95290a9b686c8977b
+      beforeImage: cCanapeaBefore,
+      afterImage: cCanapeaAfter
     },
     {
-      beforeImage: image_e2d6a2e1e9ecbbbf0034c90b7d6f8bc574f78cf8,
-      afterImage: image_465c9e36ddc9542a2506c6eb8763d7054df6cf91
+      beforeImage: zzAnapeaBefore,
+      afterImage: zzAnapeaAfter
     },
     {
-      beforeImage: image_3b4edcf7f6bf5d3f66a7f9c246627431a8646d7e,
-      afterImage: image_0d3ea940d0f6d8369b90fee3ee59db5274ed252b
+      beforeImage: zofaBefore,
+      afterImage: zofaAfter
     },
     {
-      beforeImage: image_67d522caaf32dba93509795d9a73fb5d7d06e131,
-      afterImage: image_07f779cc08205d3fee8280e6277763489d10b147
+      beforeImage: petsBefore,
+      afterImage: petsAfter
     },
     {
-      beforeImage: image_af65474c0dd075a3e64121f4937099d429318bda,
-      afterImage: image_d306c3649707eff3ded7bec558293537cd3036ba
+      beforeImage: matrasBefore,
+      afterImage: matrasAfter
     }
   ];
 

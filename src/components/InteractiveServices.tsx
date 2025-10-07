@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import { Card, CardContent } from './ui/card';
 import { Badge } from './ui/badge';
 import { Button } from './ui/button';
-import carInteriorImage from 'figma:asset/f3070bbe5ccd7ab3e305e675c8dca94da88af172.png';
+import sofasImage from '../assets/Canapea(2).webp';
+import mattressImage from '../assets/matras(2).webp';
+import autoImage from '../assets/Auto.webp';
 import { 
   Sofa, 
   Bed, 
@@ -55,7 +57,7 @@ export function InteractiveServices() {
       title: 'Canapele, Fotolii & Scaune',
       subtitle: 'Cel mai popular serviciu',
       description: 'Curățare profesională pentru toate tipurile de canapele, fotolii și mobilier tapițat din locuința ta.',
-      image: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&h=400&fit=crop&q=80',
+      image: sofasImage,
       popular: true,
       startingPrice: '80 RON',
       savings: 'Economisești 20%',
@@ -107,7 +109,7 @@ export function InteractiveServices() {
       title: 'Saltele & Pat',
       subtitle: 'Pentru un somn sănătos',
       description: 'Curățare în profunzime pentru saltele, elimină alergenii, acarieni și bacteriile pentru un somn odihnitor.',
-      image: 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=600&h=400&fit=crop&q=80',
+      image: mattressImage,
       startingPrice: '100 RON',
       details: [
         {
@@ -157,7 +159,7 @@ export function InteractiveServices() {
       title: 'Interior Auto',
       subtitle: 'Mașina ca nouă',
       description: 'Servicii complete de curățenie pentru interiorul mașinii: scaune, plafon, portiere și covorașe.',
-      image: carInteriorImage,
+      image: autoImage,
       startingPrice: '180 RON',
       details: [
         {
