@@ -17,13 +17,68 @@
     <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 
+    <!-- Cookiebot consent banner -->
+    <script
+      id="Cookiebot"
+      src="https://consent.cookiebot.com/uc.js"
+      data-cbid="d5ab361e-2a93-4251-9634-80ab29901f53"
+      data-blockingmode="auto"
+      data-consentmode-enabled="true"
+      type="text/javascript"
+      async
+    ></script>
+
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17408215272"></script>
+    <script
+      async
+      type="text/plain"
+      data-cookieconsent="marketing"
+      src="https://www.googletagmanager.com/gtag/js?id=AW-17408215272"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'AW-17408215272');
+      gtag('consent', 'default', {
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        analytics_storage: 'denied',
+        functionality_storage: 'denied',
+        personalization_storage: 'denied',
+        security_storage: 'granted'
+      });
+
+      let gtagInitialized = false;
+      const syncGtagConsent = () => {
+        if (!window.Cookiebot || !window.Cookiebot.consent) {
+          return;
+        }
+
+        const consent = window.Cookiebot.consent;
+        gtag('consent', 'update', {
+          ad_storage: consent.marketing ? 'granted' : 'denied',
+          ad_user_data: consent.marketing ? 'granted' : 'denied',
+          ad_personalization: consent.marketing ? 'granted' : 'denied',
+          analytics_storage: consent.statistics ? 'granted' : 'denied',
+          functionality_storage: consent.preferences ? 'granted' : 'denied',
+          personalization_storage: consent.preferences ? 'granted' : 'denied',
+          security_storage: 'granted'
+        });
+
+        if (consent.marketing) {
+          if (!gtagInitialized) {
+            gtagInitialized = true;
+            gtag('js', new Date());
+            gtag('config', 'AW-17408215272');
+          }
+        } else {
+          gtagInitialized = false;
+        }
+      };
+
+      window.addEventListener('CookiebotOnConsentReady', syncGtagConsent);
+      window.addEventListener('CookiebotOnAccept', syncGtagConsent);
+      window.addEventListener('CookiebotOnDecline', syncGtagConsent);
     </script>
     
     <!-- Favicons -->
@@ -66,9 +121,9 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="format-detection" content="telephone=yes" />
-    
+
     <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    <script type="text/plain" data-cookieconsent="marketing">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
@@ -196,7 +251,9 @@
 
   <body>
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5D9LQ95T" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <div data-cookieconsent="marketing">
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5D9LQ95T" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    </div>
     <!-- End Google Tag Manager (noscript) -->
     
     <!-- SEO fallback for non-JS crawlers -->
