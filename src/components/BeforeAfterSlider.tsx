@@ -1,4 +1,4 @@
-import React, { useState, useRef, useCallback } from 'react';
+import React, { useState, useRef, useCallback, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface BeforeAfterSliderProps {
@@ -21,18 +21,29 @@ export function BeforeAfterSlider({
   const [sliderPosition, setSliderPosition] = useState(50);
   const [isDragging, setIsDragging] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
+  const containerMetrics = useRef<{ left: number; width: number }>({
+    left: 0,
+    width: 0,
+  });
+
+  const measureContainer = useCallback(() => {
+    if (!containerRef.current) return;
+    const rect = containerRef.current.getBoundingClientRect();
+    containerMetrics.current = { left: rect.left, width: rect.width };
+  }, []);
 
   const updateSliderPosition = useCallback((clientX: number) => {
-    if (!containerRef.current) return;
+    const { left, width } = containerMetrics.current;
+    if (!width) return;
 
-    const rect = containerRef.current.getBoundingClientRect();
-    const x = clientX - rect.left;
-    const percentage = Math.min(Math.max((x / rect.width) * 100, 0), 100);
+    const x = clientX - left;
+    const percentage = Math.min(Math.max((x / width) * 100, 0), 100);
     setSliderPosition(percentage);
   }, []);
 
   const handlePointerDown = (event: React.PointerEvent<HTMLDivElement>) => {
     event.preventDefault();
+    measureContainer();
     setIsDragging(true);
     updateSliderPosition(event.clientX);
     event.currentTarget.setPointerCapture(event.pointerId);
@@ -49,6 +60,13 @@ export function BeforeAfterSlider({
       event.currentTarget.releasePointerCapture(event.pointerId);
     }
   };
+
+  useEffect(() => {
+    measureContainer();
+    const handleResize = () => measureContainer();
+    window.addEventListener('resize', handleResize, { passive: true });
+    return () => window.removeEventListener('resize', handleResize);
+  }, [measureContainer]);
 
   return (
     <div className={`relative group ${className}`}>

@@ -22,7 +22,7 @@ import heroImage from "./assets/Hero Image.webp";
   Alternative: Use Formspree (https://formspree.io/) for simpler setup
 */
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense, lazy } from "react";
 import { Button } from "./components/ui/button";
 import { Card, CardContent } from "./components/ui/card";
 import { Input } from "./components/ui/input";
@@ -34,9 +34,21 @@ import {
   TrustIndicators,
   CompanyStats,
 } from "./components/TrustIndicators";
-import { FloatingContact } from "./components/FloatingContact";
-import { InteractiveServices } from "./components/InteractiveServices";
-import { BeforeAfterGallery } from "./components/BeforeAfterGallery";
+const InteractiveServices = lazy(() =>
+  import("./components/InteractiveServices").then((module) => ({
+    default: module.InteractiveServices,
+  })),
+);
+const BeforeAfterGallery = lazy(() =>
+  import("./components/BeforeAfterGallery").then((module) => ({
+    default: module.BeforeAfterGallery,
+  })),
+);
+const FloatingContact = lazy(() =>
+  import("./components/FloatingContact").then((module) => ({
+    default: module.FloatingContact,
+  })),
+);
 import { toast } from "sonner@2.0.3";
 import { Toaster } from "./components/ui/sonner";
 import personalImage from "./assets/Personal.webp";
@@ -514,12 +526,16 @@ ${formData.message || "Nu a fost specificat mesaj"}
 
       {/* Interactive Services Section */}
       <section id="services">
-        <InteractiveServices />
+        <Suspense fallback={<div className="min-h-[360px]" aria-hidden="true"></div>}>
+          <InteractiveServices />
+        </Suspense>
       </section>
 
       {/* Before/After Gallery Section */}
       <section id="results">
-        <BeforeAfterGallery />
+        <Suspense fallback={<div className="min-h-[360px]" aria-hidden="true"></div>}>
+          <BeforeAfterGallery />
+        </Suspense>
       </section>
 
       {/* About Owner Section */}
@@ -976,7 +992,9 @@ ${formData.message || "Nu a fost specificat mesaj"}
       </footer>
 
       {/* Floating Contact Widget */}
-      <FloatingContact />
+      <Suspense fallback={null}>
+        <FloatingContact />
+      </Suspense>
 
       {/* Toast Notifications */}
       <Toaster />
