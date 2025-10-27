@@ -14,7 +14,7 @@ window.SesioButtonWidgetConfig = {
 <script src="https://sesio.ro/sesio-button-widget.js"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Curățare Tapițerii Brașov – Canapele | TapiClean</title>
+    <title> Curățare Tapițerii Brașov – Canapele | TapiClean </title>
     <meta name="description" content="Curățare tapițerii în Brașov: canapele, saltele și auto. Echipamente profesionale, soluții ecologice, rezultate garantate. Programează la 0744 112 555." />
     <meta name="keywords" content="curățare tapițerii Brașov, curățare canapele Brașov, curățare saltele, spălat canapea, curățare fotolii, tapițerii auto Brașov, curățare mochete, igienizare tapițerii, servicii curățenie profesională, detailing interior auto, curățare scaune, curățare piele, TapiClean Brașov" />
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
@@ -28,16 +28,88 @@ window.SesioButtonWidgetConfig = {
     <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 
-    <!-- Cookiebot consent banner -->
-    <script
-      id="Cookiebot"
-      src="https://consent.cookiebot.com/uc.js"
-      data-cbid="d5ab361e-2a93-4251-9634-80ab29901f53"
-      data-blockingmode="auto"
-      data-consentmode-enabled="true"
-      type="text/javascript"
-      async
-    ></script>
+    <link rel="stylesheet" id="silktide-consent-manager-css" href="path-to-css/silktide-consent-manager.css">
+<script src="path-to-js/silktide-consent-manager.js"></script>
+<script>
+silktideCookieBannerManager.updateCookieBannerConfig({
+  background: {
+    showBackground: true
+  },
+  cookieIcon: {
+    position: "bottomLeft"
+  },
+  cookieTypes: [
+    {
+      id: "necesar",
+      name: "Necesar",
+      description: "<p>Aceste cookie-uri sunt necesare pentru ca site-ul web să funcționeze corect și nu pot fi dezactivate. Acestea vă ajută cu lucruri precum conectarea și setarea preferințelor de confidențialitate.</p>",
+      required: true,
+      onAccept: function() {
+        console.log('Add logic for the required Necesar here');
+      }
+    },
+    {
+      id: "analytics",
+      name: "Analytics",
+      description: "<p>Aceste cookie-uri ne ajută să îmbunătățim site-ul prin urmărirea paginilor cele mai populare și a modului în care vizitatorii se deplasează pe site.</p>",
+      required: false,
+      onAccept: function() {
+        gtag('consent', 'update', {
+          analytics_storage: 'granted',
+        });
+        dataLayer.push({
+          'event': 'consent_accepted_analytics',
+        });
+      },
+      onReject: function() {
+        gtag('consent', 'update', {
+          analytics_storage: 'denied',
+        });
+      }
+    },
+    {
+      id: "publicitate",
+      name: "Publicitate",
+      description: "<p>Aceste cookie-uri oferă funcții suplimentare și personalizare pentru a vă îmbunătăți experiența. Acestea pot fi stabilite de noi sau de parteneri ale căror servicii le folosim.</p>",
+      required: false,
+      onAccept: function() {
+        gtag('consent', 'update', {
+          ad_storage: 'granted',
+          ad_user_data: 'granted',
+          ad_personalization: 'granted',
+        });
+        dataLayer.push({
+          'event': 'consent_accepted_publicitate',
+        });
+      },
+      onReject: function() {
+        gtag('consent', 'update', {
+          ad_storage: 'denied',
+          ad_user_data: 'denied',
+          ad_personalization: 'denied',
+        });
+      }
+    }
+  ],
+  text: {
+    banner: {
+      description: "<p>Folosim cookie-uri pe site-ul nostru pentru a vă îmbunătăți experiența utilizatorului, pentru a oferi conținut personalizat și pentru a analiza traficul nostru. <a href=\"https://your-website.com/cookie-policy\" target=\"_blank\">Cookie Policy.</a></p>",
+      acceptAllButtonText: "Acceptă tot",
+      acceptAllButtonAccessibleLabel: "Accept all cookies",
+      rejectNonEssentialButtonText: "Respingeți neesențiale",
+      rejectNonEssentialButtonAccessibleLabel: "Reject non-essential",
+      preferencesButtonText: "Preferinţe",
+      preferencesButtonAccessibleLabel: "Toggle preferences"
+    },
+    preferences: {
+      title: "Personalizați-vă preferințele privind cookie-urile",
+      description: "<p>Vă respectăm dreptul la confidențialitate. Puteți alege să nu permiteți anumite tipuri de cookie-uri. Preferințele dumneavoastră privind cookie-urile se vor aplica pe site-ul nostru web.</p>",
+      creditLinkText: "Get this banner for free",
+      creditLinkAccessibleLabel: "Get this banner for free"
+    }
+  }
+});
+</script>
 
     <!-- Google tag (gtag.js) -->
     <script
