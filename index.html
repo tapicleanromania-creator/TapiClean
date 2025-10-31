@@ -28,88 +28,91 @@ window.SesioButtonWidgetConfig = {
     <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 
-    <link rel="stylesheet" id="silktide-consent-manager-css" href="path-to-css/silktide-consent-manager.css">
-<script src="path-to-js/silktide-consent-manager.js"></script>
-<script>
-silktideCookieBannerManager.updateCookieBannerConfig({
-  background: {
-    showBackground: true
-  },
-  cookieIcon: {
-    position: "bottomLeft"
-  },
-  cookieTypes: [
-    {
-      id: "necesar",
-      name: "Necesar",
-      description: "<p>Aceste cookie-uri sunt necesare pentru ca site-ul web să funcționeze corect și nu pot fi dezactivate. Acestea vă ajută cu lucruri precum conectarea și setarea preferințelor de confidențialitate.</p>",
-      required: true,
-      onAccept: function() {
-        console.log('Add logic for the required Necesar here');
-      }
-    },
-    {
-      id: "analytics",
-      name: "Analytics",
-      description: "<p>Aceste cookie-uri ne ajută să îmbunătățim site-ul prin urmărirea paginilor cele mai populare și a modului în care vizitatorii se deplasează pe site.</p>",
-      required: false,
-      onAccept: function() {
-        gtag('consent', 'update', {
-          analytics_storage: 'granted',
-        });
-        dataLayer.push({
-          'event': 'consent_accepted_analytics',
-        });
-      },
-      onReject: function() {
-        gtag('consent', 'update', {
-          analytics_storage: 'denied',
-        });
-      }
-    },
-    {
-      id: "publicitate",
-      name: "Publicitate",
-      description: "<p>Aceste cookie-uri oferă funcții suplimentare și personalizare pentru a vă îmbunătăți experiența. Acestea pot fi stabilite de noi sau de parteneri ale căror servicii le folosim.</p>",
-      required: false,
-      onAccept: function() {
-        gtag('consent', 'update', {
-          ad_storage: 'granted',
-          ad_user_data: 'granted',
-          ad_personalization: 'granted',
-        });
-        dataLayer.push({
-          'event': 'consent_accepted_publicitate',
-        });
-      },
-      onReject: function() {
-        gtag('consent', 'update', {
-          ad_storage: 'denied',
-          ad_user_data: 'denied',
-          ad_personalization: 'denied',
-        });
-      }
-    }
-  ],
-  text: {
-    banner: {
-      description: "<p>Folosim cookie-uri pe site-ul nostru pentru a vă îmbunătăți experiența utilizatorului, pentru a oferi conținut personalizat și pentru a analiza traficul nostru. <a href=\"https://your-website.com/cookie-policy\" target=\"_blank\">Cookie Policy.</a></p>",
-      acceptAllButtonText: "Acceptă tot",
-      acceptAllButtonAccessibleLabel: "Accept all cookies",
-      rejectNonEssentialButtonText: "Respingeți neesențiale",
-      rejectNonEssentialButtonAccessibleLabel: "Reject non-essential",
-      preferencesButtonText: "Preferinţe",
-      preferencesButtonAccessibleLabel: "Toggle preferences"
-    },
-    preferences: {
-      title: "Personalizați-vă preferințele privind cookie-urile",
-      description: "<p>Vă respectăm dreptul la confidențialitate. Puteți alege să nu permiteți anumite tipuri de cookie-uri. Preferințele dumneavoastră privind cookie-urile se vor aplica pe site-ul nostru web.</p>",
-      creditLinkText: "Get this banner for free",
-      creditLinkAccessibleLabel: "Get this banner for free"
-    }
-  }
-});
-</script>
+    <link
+      rel="stylesheet"
+      id="silktide-consent-manager-css"
+      href="./silktide-consent-manager.css"
+    />
+    <script src="./silktide-consent-manager.js"></script>
+    <script>
+      silktideCookieBannerManager.updateCookieBannerConfig({
+        background: {
+          showBackground: true
+        },
+        cookieIcon: {
+          position: "bottomLeft"
+        },
+        cookieTypes: [
+          {
+            id: "necessary",
+            name: "Necessary",
+            description: "<p>These cookies are necessary for the website to function properly and cannot be switched off. They help with things like logging in and setting your privacy preferences.</p>",
+            required: true,
+            onAccept: function() {
+              console.log('Add logic for the required Necessary here');
+            }
+          },
+          {
+            id: "analytics",
+            name: "Analytics",
+            description: "<p>These cookies help us improve the site by tracking which pages are most popular and how visitors move around the site.</p>",
+            defaultValue: true,
+            onAccept: function() {
+              gtag('consent', 'update', {
+                analytics_storage: 'granted',
+              });
+              dataLayer.push({
+                'event': 'consent_accepted_analytics',
+              });
+            },
+            onReject: function() {
+              gtag('consent', 'update', {
+                analytics_storage: 'denied',
+              });
+            }
+          },
+          {
+            id: "advertising",
+            name: "Advertising",
+            description: "<p>These cookies provide extra features and personalization to improve your experience. They may be set by us or by partners whose services we use.</p>",
+            onAccept: function() {
+              gtag('consent', 'update', {
+                ad_storage: 'granted',
+                ad_user_data: 'granted',
+                ad_personalization: 'granted',
+              });
+              dataLayer.push({
+                'event': 'consent_accepted_advertising',
+              });
+            },
+            onReject: function() {
+              gtag('consent', 'update', {
+                ad_storage: 'denied',
+                ad_user_data: 'denied',
+                ad_personalization: 'denied',
+              });
+            }
+          }
+        ],
+        text: {
+          banner: {
+            description: "<p>We use cookies on our site to enhance your user experience, provide personalized content, and analyze our traffic. <a href=\"https://your-website.com/cookie-policy\" target=\"_blank\">Cookie Policy.</a></p>",
+            acceptAllButtonText: "Accept all",
+            acceptAllButtonAccessibleLabel: "Accept all cookies",
+            rejectNonEssentialButtonText: "Reject non-essential",
+            rejectNonEssentialButtonAccessibleLabel: "Reject non-essential",
+            preferencesButtonText: "Preferences",
+            preferencesButtonAccessibleLabel: "Toggle preferences"
+          },
+          preferences: {
+            title: "Customize your cookie preferences",
+            description: "<p>We respect your right to privacy. You can choose not to allow some types of cookies. Your cookie preferences will apply across our website.</p>",
+            creditLinkText: "Get this banner for free",
+            creditLinkAccessibleLabel: "Get this banner for free"
+          }
+        }
+      });
+    </script>
 
     <!-- Google tag (gtag.js) -->
     <script
