@@ -325,7 +325,7 @@ export function InteractiveServices() {
                             <Tag className="w-6 h-6 text-white" />
                           </div>
                           <div>
-                            <div className="font-bold text-gray-800 text-lg">Preț fix {category.startingPrice}</div>
+                            <div className="font-bold text-gray-800 text-lg"> {category.startingPrice}</div>
                             <div className="text-sm text-gray-600">Preț final după evaluare gratuită</div>
                           </div>
                         </div>
