@@ -59,32 +59,32 @@ export function InteractiveServices() {
       description: 'Curățare profesională pentru toate tipurile de canapele, fotolii și mobilier tapițat din locuința ta.',
       image: sofasImage,
       popular: true,
-      startingPrice: '80 RON',
+      startingPrice: 'de la 80 RON',
       savings: 'Economisești 20%',
       details: [
         {
           name: 'Canapele din Piele',
           description: 'Curățare specializată cu produse pentru piele naturală',
           duration: '45-60 min',
-          price: '150 RON'
+          price: 'de la 180 RON'
         },
         {
           name: 'Canapele din material textil',
           description: 'Curățare în profunzime pentru toate tipurile de țesături',
           duration: '60-90 min',
-          price: '120 RON'
+          price: 'de la 120 RON'
         },
         {
           name: 'Fotolii & Scaune',
           description: 'Curățare detaliată pentru fotolii și scaune tapițate',
           duration: '30-45 min',
-          price: '80 RON'
+          price: 'de la 80 RON'
         },
         {
-          name: 'Canapele Colțar',
+          name: 'Canapele tip Colțar',
           description: 'Serviciu specializat pentru canapele mari modulare',
           duration: '90-120 min',
-          price: '200 RON'
+          price: 'de la 200 RON'
         }
       ],
       features: [
@@ -110,31 +110,31 @@ export function InteractiveServices() {
       subtitle: 'Pentru un somn sănătos',
       description: 'Curățare în profunzime pentru saltele, elimină alergenii, acarieni și bacteriile pentru un somn odihnitor.',
       image: mattressImage,
-      startingPrice: '100 RON',
+      startingPrice: 'de la 100 RON',
       details: [
         {
           name: 'Saltele Matrimoniale',
           description: 'Curățare completă și dezinfectare pentru saltele mari',
           duration: '60-75 min',
-          price: '180 RON / 1 față'
+          price: 'de la 200 RON / 1 față'
         },
         {
-          name: 'Saltele Simple',
+          name: 'Saltele o persoană',
           description: 'Serviciu specializat pentru saltele individuale',
           duration: '45-60 min',
-          price: '120 RON / 1 față'
+          price: 'de la 150 RON / 1 față'
         },
         {
           name: 'Saltele Copii',
           description: 'Curățare delicată cu produse sigure pentru copii',
           duration: '30-45 min',
-          price: '100 RON / 1 față'
+          price: 'de la 100 RON / 1 față'
         },
         {
           name: 'Tablie Tapițată',
           description: 'Curățare pentru tablii de pat și ramuri tapițate',
           duration: '30-40 min',
-          price: '70 RON'
+          price: 'de la 70 RON'
         }
       ],
       features: [
@@ -160,7 +160,7 @@ export function InteractiveServices() {
       subtitle: 'Mașina ca nouă',
       description: 'Servicii complete de curățenie pentru interiorul mașinii: scaune, plafon, portiere și covorașe.',
       image: autoImage,
-      startingPrice: '180 RON',
+      startingPrice: 'de la 180 RON',
       details: [
         {
           name: 'Scaune Auto Piele',
@@ -178,7 +178,7 @@ export function InteractiveServices() {
           name: 'Pachet Complet',
           description: 'Scaune + portiere + covorașe',
           duration: '2-3 ore',
-          price: '350 RON'
+          price: '450 RON'
         }
       ],
       features: [

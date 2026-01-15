@@ -356,7 +356,7 @@ ${formData.message || "Nu a fost specificat mesaj"}
                 }
                 className="shadow-md hover:shadow-lg transition-shadow bg-brand-gradient hover:opacity-90"
               >
-                Ofertă Gratuită
+                Evaluare Gratuită
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
             </div>
@@ -408,7 +408,7 @@ ${formData.message || "Nu a fost specificat mesaj"}
                     }}
                     className="w-full bg-brand-gradient hover:opacity-90"
                   >
-                    Ofertă Gratuită
+                    Evaluare Gratuită
                   </Button>
                 </div>
               </nav>
@@ -442,12 +442,12 @@ ${formData.message || "Nu a fost specificat mesaj"}
 
                 <h2 className="text-4xl lg:text-6xl font-bold leading-tight text-[48px]">
                   <span className="text-brand-gradient">Curățare profesională tapițerie</span>{" "}
-                  în Brașov – canapele, saltele și tapițerie auto
+                  în Brașov - canapele, saltele și tapițerie auto
                 </h2>
 
                 <p className="text-xl text-gray-600 leading-relaxed max-w-xl">
                   Servicii specializate de curățare tapițerie
-                  în zonă și împrejurimi. Canapele, fotolii,
+                  în Brașov și împrejurimi. Canapele, fotolii,
                   saltele și scaune auto - toate curățate
                   profesional cu garanție completă și produse și
                   echipamente de înaltă calitate.
@@ -573,7 +573,7 @@ ${formData.message || "Nu a fost specificat mesaj"}
                   <strong className="text-brand-gradient">
                     curățare tapițerie de calitate profesională
                   </strong>{" "}
-                  direct în zonă și împrejurimi. Fiecare
+                  direct în Brașov și împrejurimi. Fiecare
                   canapea, fotoliu sau saltea pe care o curăț
                   este tratată cu aceeași grijă pe care o port
                   propriilor bunuri.
@@ -645,8 +645,8 @@ ${formData.message || "Nu a fost specificat mesaj"}
               Curățare Tapițerie în Brașov?
             </h2>
             <p className="text-xl text-gray-600">
-              Obține o evaluare și ofertă gratuită pentru
-              serviciul de curățare tapițerie în zonă și
+              Obține o evaluare gratuită pentru
+              serviciul de curățare tapițerie în Brașov și
               împrejurimi. Răspundem în maxim 24 de ore!
             </p>
           </div>
@@ -893,12 +893,12 @@ ${formData.message || "Nu a fost specificat mesaj"}
                   Curățare tapițerie profesională în Brașov.
                 </strong>{" "}
                 Servicii specializate pentru canapele, fotolii,
-                saltele și scaune auto. Acoperim zona Braș și
+                saltele și scaune auto. Acoperim zona Brașov și
                 toate comunele limitrofe.
               </p>
               <div className="flex items-center gap-2 mb-4">
                 <MapPin className="w-5 h-5 text-[#00B5FC]" />
-                <span>Brașov și împrejurimile (30km rază)</span>
+                <span>Brașov și împrejurimi (pe o rază de 30km)</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle className="w-5 h-5 text-green-400" />
@@ -964,7 +964,7 @@ ${formData.message || "Nu a fost specificat mesaj"}
                     <strong>Duminică:</strong> 10:00 - 17:00
                   </p>
                   <p className="text-sm text-green-300 font-medium">
-                    ⚡ Urgențe 24/7 în zonă
+                    ⚡ Urgențe 24/7 în Brașov și împrejurimi
                   </p>
                 </div>
               </div>
